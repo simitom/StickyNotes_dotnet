@@ -55,10 +55,10 @@
             this.textBox1.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
+            this.textBox1.Location = new System.Drawing.Point(12, 36);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 251);
+            this.textBox1.Size = new System.Drawing.Size(301, 189);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -112,7 +112,7 @@
             // 
             this.LblReminder.AutoSize = true;
             this.LblReminder.LinkColor = System.Drawing.Color.Black;
-            this.LblReminder.Location = new System.Drawing.Point(330, 283);
+            this.LblReminder.Location = new System.Drawing.Point(230, 228);
             this.LblReminder.Name = "LblReminder";
             this.LblReminder.Size = new System.Drawing.Size(83, 13);
             this.LblReminder.TabIndex = 1;
@@ -148,15 +148,17 @@
             this.panel1.Controls.Add(this.AddNewForm);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(424, 28);
+            this.panel1.Size = new System.Drawing.Size(325, 28);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // DeleteForm
             // 
             this.DeleteForm.AutoSize = true;
             this.DeleteForm.ForeColor = System.Drawing.Color.Red;
             this.DeleteForm.Image = global::StickyNotes.Properties.Resources.delete_13;
-            this.DeleteForm.Location = new System.Drawing.Point(390, 8);
+            this.DeleteForm.Location = new System.Drawing.Point(291, 8);
             this.DeleteForm.Name = "DeleteForm";
             this.DeleteForm.Size = new System.Drawing.Size(12, 13);
             this.DeleteForm.TabIndex = 1;
@@ -180,9 +182,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(425, 305);
+            this.ClientSize = new System.Drawing.Size(325, 250);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Delete);
@@ -192,9 +193,9 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Opacity = 0.95D;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
