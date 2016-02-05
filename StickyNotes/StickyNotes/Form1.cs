@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,8 @@ namespace StickyNotes
     {
         
         string path = @"C:\StickyNotes";
-
-       // bool onlyHideOnClose = true;
+       
+       
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -24,6 +25,7 @@ namespace StickyNotes
         public static extern int SendMessage(IntPtr hWnd,int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
 
         public Form1()
         {
@@ -134,31 +136,8 @@ namespace StickyNotes
             sw.Close();
 
         }
-
-                     
-        //private void Delete_Click(object sender, EventArgs e)
-        //{
-        //    if (MessageBox.Show("Do you realy want to delete note?", "Exit",
-        //                   MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        var fileDelete = @"C:\StickyNotes\" + this.Tag + ".txt";
-        //        {
-        //            if (File.Exists(fileDelete))
-        //            {
-        //               File.Delete(fileDelete);
-        //               this.Close();
-        //            }
-        //        }
-                
-        //        MessageBox.Show("File Deleted");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Cancel");
-        //        return;
-        //    }
-        //}
-
+  
+        
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
            
@@ -204,14 +183,17 @@ namespace StickyNotes
                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     var fileDelete = @"C:\StickyNotes\" + this.Tag + ".txt";
+                   
                     {
                         if (File.Exists(fileDelete))
                         {
                             File.Delete(fileDelete);
-                            this.Close();
+                            
                         }
+                 
                     }
 
+                    this.Close();
                     MessageBox.Show("File Deleted");
                 }
                 else
@@ -228,12 +210,7 @@ namespace StickyNotes
 
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
+               
 
         private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
@@ -258,6 +235,30 @@ namespace StickyNotes
             }
         }
 
-                         
+       
+     
+
+        private void exitToolStripMenuItemHide_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+           
+        }
+
+       
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+                                            
     }
 }

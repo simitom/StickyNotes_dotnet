@@ -31,16 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ToolStripMenuItemHId = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemHide = new System.Windows.Forms.ToolStripMenuItem();
             this.fontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.styleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.LblReminder = new System.Windows.Forms.LinkLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.AddNew = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Minimize = new System.Windows.Forms.Label();
+            this.Close = new System.Windows.Forms.Label();
             this.DeleteForm = new System.Windows.Forms.Label();
             this.AddNewForm = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
@@ -66,19 +68,19 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItemHId,
+            this.ToolStripMenuItemHide,
             this.fontToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.ToolStripMenuItemExit});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(100, 70);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // ToolStripMenuItemHId
+            // ToolStripMenuItemHide
             // 
-            this.ToolStripMenuItemHId.Name = "ToolStripMenuItemHId";
-            this.ToolStripMenuItemHId.Size = new System.Drawing.Size(99, 22);
-            this.ToolStripMenuItemHId.Text = "Hide";
-            this.ToolStripMenuItemHId.Click += new System.EventHandler(this.exitToolStripMenuItemExit_Click);
+            this.ToolStripMenuItemHide.Name = "ToolStripMenuItemHide";
+            this.ToolStripMenuItemHide.Size = new System.Drawing.Size(99, 22);
+            this.ToolStripMenuItemHide.Text = "Hide";
+            this.ToolStripMenuItemHide.Click += new System.EventHandler(this.exitToolStripMenuItemHide_Click);
             // 
             // fontToolStripMenuItem
             // 
@@ -101,12 +103,12 @@
             this.colorToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.colorToolStripMenuItem.Text = "Color";
             // 
-            // exitToolStripMenuItem
+            // ToolStripMenuItemExit
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.ToolStripMenuItemExit.Name = "ToolStripMenuItemExit";
+            this.ToolStripMenuItemExit.Size = new System.Drawing.Size(99, 22);
+            this.ToolStripMenuItemExit.Text = "Exit";
+            this.ToolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
             // 
             // LblReminder
             // 
@@ -144,21 +146,45 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.Close);
+            this.panel1.Controls.Add(this.Minimize);
             this.panel1.Controls.Add(this.DeleteForm);
             this.panel1.Controls.Add(this.AddNewForm);
-            this.panel1.Location = new System.Drawing.Point(0, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 28);
+            this.panel1.Size = new System.Drawing.Size(325, 30);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // Minimize
+            // 
+            this.Minimize.AutoSize = true;
+            this.Minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Minimize.Location = new System.Drawing.Point(270, 8);
+            this.Minimize.Name = "Minimize";
+            this.Minimize.Size = new System.Drawing.Size(14, 13);
+            this.Minimize.TabIndex = 7;
+            this.Minimize.Text = "_";
+            this.Minimize.Click += new System.EventHandler(this.Minimize_Click);
+            // 
+            // Close
+            // 
+            this.Close.AutoSize = true;
+            this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.Location = new System.Drawing.Point(299, 8);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(13, 13);
+            this.Close.TabIndex = 8;
+            this.Close.Text = "x";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // DeleteForm
             // 
             this.DeleteForm.AutoSize = true;
             this.DeleteForm.ForeColor = System.Drawing.Color.Red;
             this.DeleteForm.Image = global::StickyNotes.Properties.Resources.delete_13;
-            this.DeleteForm.Location = new System.Drawing.Point(291, 8);
+            this.DeleteForm.Location = new System.Drawing.Point(63, 8);
             this.DeleteForm.Name = "DeleteForm";
             this.DeleteForm.Size = new System.Drawing.Size(12, 13);
             this.DeleteForm.TabIndex = 1;
@@ -212,14 +238,16 @@
         private System.Windows.Forms.Button AddNew;
         public System.Windows.Forms.Button Delete;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemHId;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemHide;
         private System.Windows.Forms.ToolStripMenuItem fontToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem styleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label AddNewForm;
         private System.Windows.Forms.Label DeleteForm;
+        private System.Windows.Forms.Label Minimize;
+        private System.Windows.Forms.Label Close;
     }
 }
 
