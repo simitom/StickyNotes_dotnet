@@ -7,3 +7,5 @@ E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Debug\
 E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Debug\StickyNotes.exe
 E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Debug\StickyNotes.pdb
 E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Debug\StickyNotes.csprojResolveAssemblyReference.cache
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\bin\Debug\log4net.dll
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\bin\Debug\log4net.xml

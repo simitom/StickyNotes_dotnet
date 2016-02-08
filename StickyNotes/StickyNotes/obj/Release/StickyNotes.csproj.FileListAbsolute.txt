@@ -1,0 +1,8 @@
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\bin\Release\StickyNotes.exe
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\bin\Release\StickyNotes.pdb
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.Form1.resources
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.Properties.Resources.resources
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.Reminder.resources
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.csproj.GenerateResource.Cache
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.exe
+E:\myprojects\DotNet_tutorials\StickyNote.net\StickyNotes\StickyNotes\obj\Release\StickyNotes.pdb

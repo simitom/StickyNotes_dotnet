@@ -188,9 +188,8 @@ namespace StickyNotes
                         if (File.Exists(fileDelete))
                         {
                             File.Delete(fileDelete);
-                            
+                           
                         }
-                 
                     }
 
                     this.Close();
@@ -211,7 +210,6 @@ namespace StickyNotes
         }
 
                
-
         private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             {
@@ -237,7 +235,6 @@ namespace StickyNotes
 
        
      
-
         private void exitToolStripMenuItemHide_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
