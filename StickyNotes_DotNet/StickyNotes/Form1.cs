@@ -17,8 +17,8 @@ namespace StickyNotes
         
         string path = @"C:\StickyNotes";
        
-       
-        public const int WM_NCLBUTTONDOWN = 0xA1;
+       //for dragging the form
+        public const int WM_NCLBUTTONDOWN = 0xA1;  
         public const int HT_CAPTION = 0x2;
 
         [DllImportAttribute("user32.dll")]
@@ -68,7 +68,6 @@ namespace StickyNotes
             {
                 if (Directory.GetFiles(path).Length > 0)
                 {
-                    //this.Hide();
                     var files = Directory.GetFiles(path);
                     foreach (string fileName in files)
                     {
@@ -101,15 +100,6 @@ namespace StickyNotes
             }
         }
 
-        //private void AddNew_Click(object sender, EventArgs e)
-        //{
-        //    Form1 fm = new Form1();
-        //   // fm.Width = 300;
-        //    fm.Tag = Guid.NewGuid().ToString();
-           
-        //    fm.Show();
-        //}
-
         private void OpenNewForm()
         {
             Form1 fm = new Form1();
@@ -136,34 +126,8 @@ namespace StickyNotes
             sw.Close();
 
         }
-  
-        
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-           
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exitToolStripMenuItemExit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-       
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+                      
+      
         private void AddNewForm_Click_1(object sender, EventArgs e)
         {
             {
@@ -204,13 +168,8 @@ namespace StickyNotes
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-               
-        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+                      
+        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e) //for dragging the form
         {
             {
                 if (e.Button == MouseButtons.Left)
